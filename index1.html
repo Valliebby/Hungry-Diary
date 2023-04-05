@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hungry Diary</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+    <link href="htpps://www.themealdb.com/api/json/v1/1/lookup.php?i=52772" crossorigin>
+    <script src="https://kit.fontawesome.com/0e0d24c254.js" crossorigin="anonymous"></script>
+</head>
+  <!-- beginning of div  --> 
+<body onload="slider()">
+     <div class="container">
+          <div class="nav-wrapper">
+             <div class="left-side">
+                  <div class="nav-link-wrapper .active-nav-link">
+                       <a href="index.html">Home</a>
+                  </div>
+  
+                  <div class="nav-link-wrapper">
+                       <a href="about.html">Hungry Diary</a>
+                  </div>
+             </div>
+  
+             <div class="right-side">
+                  <div class="brand">
+                       <div></div>
+                  </div>
+             </div>
+     </div>
+ <div class="banner">
+     <div class="slider">
+       <img src="images/p2.jpg" id="slideImg">
+    </div>
+          <div class="overlay">
+               <div class="content">
+                    <h1>LETS START OUR Hungry Diary JOURNEY!</h1>
+                    <h3>Subscribe to start your recipe journey!</h3>
+               <div id="main" class="container">
+                <div class="row text-center">
+                  <h3>Feeling Hungry?</h3>
+                  <h5>Get a random meal by clicking button!</h5>
+                  <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="col-span-1 flex items-center justify-center bg-cover bg-center"
+                      <p><span class="tooltip fa-sharp fa-solid fa-wand-magic-sparkles"
+                         title="Press ADD after each ingredient. Press SUBMIT after entering all three."></span></p>
+                               
+       <div>
+        <input
+          class="w-4/5 flex-auto px-2 py-2 leading-tight text-gray-700 bg-gray-100 rounded-md border border-gray-400 focus:outline-none focus:bg-white focus:border-blue-500"
+           id="user-input" id="user-input" placeholder="Type Ingredient Here" />
+                               
+          <button
+              class="bg-pink-400 flex-auto text-white font-bold py-1 px-1 rounded active:bg-pink-700 focus:outline-none focus:ring focus:ring-pink-300 hover:bg-pink-600"
+                id="add">
+                 add
+                 </button>
+                 <br />
+                 </div>
+               <div>
+               </div>
+               <div id="meal" class="row-meal"></div>
+               </div>
+              </div>
+            </div>
+               
+     </div>         
+ </div>
+
+<div id="warning"></div>
+     <div class="bg-amber-400 text-white font-bold rounded-md hover:bg-amber-600 focus:ring focus:ring-amber-200 static inset-x-0 bottom-0" id="badges"><br /></div>
+                
+     <div>
+      <button id="wand-btn">
+      <i
+       class="fa-sharp fa-solid fa-wand-magic-sparkles bg-violet-400 w-3/4 flex-auto text-white font-bold py-1 px-1 rounded active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 hover:bg-pink-600">
+       Submit</i>
+        </button>
+        </div>
+     </div>
+     </div>
+                
+ <div id="recipes" class="container">
+      <div class="grid grid-cols-1 md:grid-cols-3">
+          <div id="recipe-1" class="col-span-1 bg-cover bg-center"
+
+             <div class="recipe-content"></div>
+             <img id="“logo”" src="" alt="Wish 1" />
+      </div>
+        <div id="recipe-2" class="col-span-1 bg-cover bg-center"
+          <div class="recipe-content"></div>
+          <img id="“logo”" src=""" alt="“Wish 2" />
+      </div>
+      <div id="recipe-3" class="col-span-1 bg-cover bg-center"
+         <div class="recipe-content"></div>
+         <img id="“logo”" src="" alt="Wish 3" />
+        </div>
+       </div>
+     </div>
+
+
+ </div>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="script.js"> </script>
+</body>
+</html>
+
+<script>
+ var slideImg = document.getElementById("slideImg");
+
+     var images = [
+          "images/p1.jpg",
+          "images/p4.jpg",
+          "images/p5.jpg",
+          "images/p6.jpg",
+          "images/p7.jpg",
+          "images/p8.jpg",
+          "images/p9.jpg",
+          "images/p10.jpg",
+          "images/p12.jpg",
+];
+
+     var len = images.length;
+     var i = 0;
+
+     function slider(){
+          if(i > len-1){
+               i = 0;
+          }
+          slideImg.src = images[i];
+          i++;
+          setTimeout('slider()',3000);
+     }
+</script>
+<script src="script2.js"> </script>
+</body>
+</html>
